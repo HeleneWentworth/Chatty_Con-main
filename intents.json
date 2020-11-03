@@ -30,8 +30,13 @@
      "context_set": ""
     },
     {"tag": "jokes",
-        "patterns": ["jokes", "tell me a joke", "tell a joke"],
-        "responses": ["Haha fool"],
+        "patterns": ["cheer me up", "tell me a joke", "tell a joke"],
+        "responses": ["I went to buy some camouflage trousers the other day, but I couldn’t find any", "I have kleptomania. But when it gets bad, I take something for it", "I was playing chess with my friend and he said, ‘Let’s make this interesting’. So we stopped playing chess"],
+        "context_set": ""
+       },
+       {"tag": "motivation",
+        "patterns": ["I am feeling down", "motivate me", "Inspire me"],
+        "responses": ["Obstacles are the cost of greatness", "I wasn’t there to compete. I was there to win"],
         "context_set": ""
        }
 ]

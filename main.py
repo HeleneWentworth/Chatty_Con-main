@@ -9,14 +9,13 @@ import random
 import json
 import pickle
 import os
+import sys
 import pyttsx3
 
 
 with open("intents.json") as file:
     data = json.load(file)
     
-
-
 try:
     with open("data.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
@@ -41,6 +40,7 @@ except:
 
     labels = sorted(labels)
 
+# create our training data
     training = []
     output = []
 
@@ -89,7 +89,7 @@ if os.path.exists("model.tflearn.meta"):
 
         model.load("model.tflearn")
 else:
-    model.fit(training, output, n_epoch=5000, batch_size=8, show_metric=True)
+    model.fit(training, output, n_epoch=8000, batch_size=8, show_metric=True)
     model.save("model.tflearn")
 
 def bag_of_words(s, words):
@@ -105,15 +105,17 @@ def bag_of_words(s, words):
             
     return numpy.array(bag)
 
-    print("Setting up Voice")
+print("Setting up Voice")
+def init_engine():
     engine = pyttsx3.init()
+    return engine
 
-    def speak(text):
-            engine.say(text)
-            engine.RunAndWait()
+def say(s):
+    engine.say(s)
+    engine.runAndWait()
 
-    speak("ChattyCon is getting ready")
-
+engine = init_engine()
+say("Hello")
 
 
 def chat():
@@ -131,7 +133,10 @@ def chat():
             if tg['tag'] == tag:
                 responses = tg['responses']
 
-        print(random.choice(responses))
+        response = random.choice(responses)
+
+        print(response)
+        say(response)
 
 chat()
 
