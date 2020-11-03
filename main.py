@@ -89,7 +89,7 @@ if os.path.exists("model.tflearn.meta"):
 
         model.load("model.tflearn")
 else:
-    model.fit(training, output, n_epoch=8000, batch_size=8, show_metric=True)
+    model.fit(training, output, n_epoch=5000, batch_size=8, show_metric=True)
     model.save("model.tflearn")
 
 def bag_of_words(s, words):
