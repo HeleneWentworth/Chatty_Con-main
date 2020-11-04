@@ -105,18 +105,18 @@ base.geometry("400x500")
 base.resizable(width=FALSE, height=FALSE)
 
 #Create Chat window
-ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Montserrat",)
+ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Montserrat", highlightbackground="Purple",)
 ChatLog.config(state=DISABLED)
 
 #Bind scrollbar to Chat window
-scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="heart")
+scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="man")
 ChatLog['yscrollcommand'] = scrollbar.set
 
 #Create Button to send message
-SendButton = Button(base, font=("Quicksand",12,'bold'), text="Send", width="12", height=5, bd=0, bg="#32de97", activebackground="#3c9d9b",fg='#ffffff', command= send )
+SendButton = Button(base, font=("Quicksand",12,'bold'), text="Send", width="12", height=5, bd=0, bg="black", highlightbackground="black",fg='white', command= send )
 
 #Create the box to enter message
-EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial")
+EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Quicksand", highlightbackground="black")
 #EntryBox.bind("<Return>", send)
 
 #Place all components on the screen

@@ -63,8 +63,7 @@ except:
         training.append(bag)
         output.append(output_row)
 
-        
-
+    
 
     training = numpy.array(training)
     output = numpy.array(output)
