@@ -24,11 +24,11 @@ Use `File - Open` in Visual Studio Code.
 3. Make sure to have Python version 3.6.5
 
 4. Install the following libraries
-### python3.6 -m pip install tensorflow==1.8
-### python3.6 -m pip install tflearn
-### python3.6 -m pip install nltk
-### python3.6 -m pip install numpy
-### python3.6 -m pip install pickle
+ python3.6 -m pip install tensorflow==1.8
+ python3.6 -m pip install tflearn
+ python3.6 -m pip install nltk
+ python3.6 -m pip install numpy
+ python3.6 -m pip install pickle
 
 
 ## Authors
